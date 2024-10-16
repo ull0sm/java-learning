@@ -6,20 +6,20 @@ public class rev_array {
         System.out.println("Enter the n");
         int n = sc.nextInt();
         int[] arr = new int[n];
-        int[] arrj = new int[n];
+        System.out.println("=========================================");
 
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
         int t;
         System.out.println("=========================================");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= (n-1)/2; i++) {
             t = arr[i];
             arr[i]=arr[n-i-1];
             arr[n-i-1] = t;
-            arrj[i]=arr[n-i-1];
-            System.out.println(arr[i]);
-            // System.out.println(arrj[i]);
+        }
+        for (int j = 0; j < n; j++) {
+            System.out.println(arr[j]);
         }
     }
 }
