@@ -28,6 +28,5 @@ public class calculator {
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
         System.out.println(cal(n1, n2, c));
-
     }
 }
