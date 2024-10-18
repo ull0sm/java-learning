@@ -27,6 +27,11 @@ public class calculator {
         System.out.println("enter the two numbers:");
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
-        System.out.println(cal(n1, n2, c));
+        if (cal(n1, n2, c) == -1) {
+            System.out.println("error!!");
+        }
+        else{
+            System.out.println(cal(n1, n2, c));
+        }
     }
 }
