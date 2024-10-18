@@ -14,12 +14,11 @@ public class SumOfEvenNumbers {
     }
 
     public static void main(String[] args) {
-        System.out.print("enter the size of the array:");
-        int size = sc.nextInt();
-        int[] arr = new int[size];
-        System.out.println("enter the elements of the array:");
-        for (int i = 0; i < size; i++) {
-            arr[i] = sc.nextInt();
+        System.out.print("enter the number upto where you want sum:");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = i+1;
         }
         System.out.println("Sum: " + even(arr));
     }
