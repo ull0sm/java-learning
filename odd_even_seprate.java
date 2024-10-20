@@ -4,14 +4,15 @@ public class odd_even_seprate {
     static Scanner sc = new Scanner(System.in);
 
     public static int[][] separate(int[] x) {
-        int[][] sepa = new int[x.length][x.length];
-        for (int i = 0; i < sepa.length; i++) {
-            for (int j = 0; j < sepa.length; j++) {
-                if (x[j] % 2 == 0) {
-                    sepa[1][j] = x[j];
-                } else {
-                    sepa[2][j] = x[j];
-                }
+        int[][] sepa = new int[2][x.length];
+        int odd = 0, even = 0;
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] % 2 == 0) {
+                sepa[0][even] = x[i];
+                even++;
+            } else {
+                sepa[1][odd] = x[i];
+                odd++;
             }
         }
         return sepa;
@@ -19,19 +20,25 @@ public class odd_even_seprate {
 
     public static void main(String[] args) {
         int size;
-        System.out.println("Enter the size of the array:");
+        System.out.print("Enter the size of the array:");
         size = sc.nextInt();
         int[] a = new int[size];
         for (int i = 0; i < size; i++) {
             a[i] = sc.nextInt();
         }
         int[][] ans = separate(a);
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[1][i] + " ");
+        System.out.print("odd: ");
+        for (int i = 0; i < a.length; i++) {
+            if (ans[0][i] != 0) {
+                System.out.print(ans[0][i] + " ");
+            }
         }
         System.out.println();
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[2][i] + " ");
+        System.out.print("even: ");
+        for (int i = 0; i < a.length; i++) {
+            if (ans[1][i] != 0) {
+                System.out.print(ans[1][i] + " ");
+            }
         }
 
     }
