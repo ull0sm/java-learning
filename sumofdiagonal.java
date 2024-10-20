@@ -25,6 +25,6 @@ public class sumofdiagonal {
                 mat[i][j] = sc.nextInt();
             }
         }
-        System.out.println("sum: " + sumofmat(mat,size));
+        System.out.println("sum: " + sumofmat(mat, size));
     }
 }
